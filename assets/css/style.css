@@ -1,0 +1,21 @@
+body {
+    background-image: url("../images/backgroundSymbols.jpg");
+}
+
+.jumbotron {
+    background-image: url("../images/gravel.png");
+    margin: auto;
+    width: 60%;
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.display-4 {
+    text-align: center;
+    color: rgb(13, 13, 119);
+    text-shadow: 4px 2px #3b9711;
+}
+
+.lead {
+    text-align: center;
+}
