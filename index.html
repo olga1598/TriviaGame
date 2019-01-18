@@ -6,29 +6,77 @@
     <title>Trivia Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
 
-        <div class="jumbotron">
-                <h1 class="display-4">Fun Trivia Game</h1>
-                <p class="lead">Time remaining: </p>
-                <hr class="my-4">
-                <div class="question">
+    <div class="jumbotron">
+        <h1 class="display-4">Fun Trivia Game</h1>
+        <p class="timeCount">Time remaining: </p>
+        <hr class="my-4">
+        <div class="question">
                     
-                </div>
-                <div class="answers">
+    </div>
+        </br>
 
-                </div>
+                <!--<div class="answers">
+                    <div id="answer1">First choice</div>
+                    <div id="answer2">Second choice</div>
+                    <div id="answer3">Third choice</div>
+                    <div id="answer4">Forth choice</div>
 
-                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-                <p class="lead">
-                  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                </p>
-              </div>
+                </div>-->
+
+                <!--<div class="answers">
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="option1" autocomplete="off">Radio
+                                </label>
+                            </br>
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="option2" autocomplete="off">Radio
+                                </label>
+                            </br>
+                                <label class="btn btn-secondary">
+                                  <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+                                </label>
+                            </br>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" name="options" id="option1" autocomplete="off"> Radio
+                                </label>
+      
+                </div>-->
+            <div class="answers">
+                <button type="button" id="button1" class="btn btn-info">Light</button>
+                </br>
+                </br>
+                <button type="button" id="button2" class="btn btn-info">Light</button>
+                </br>
+                </br>
+                <button type="button" id="button3" class="btn btn-info">Light</button>
+                </br>
+                </br>
+                <button type="button" id="button4" class="btn btn-info">Light</button>
+            </div>
+
+            <div class="result"></div>
+            <div class="correctAnswer"></div>
+            <div class="scores">
+               <div id="rightAnswers"></div>
+               <div id="wrongAnswers"></div>
+               <div id="unanswered"></div>
+            </div>
+            </br>
+            <img id="pic">
+            <img id="correctAnswer" src="assets/images/goodjob.jpg">
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">START</a>
+            </p>
+            <button type="button" id="playagain" class="btn btn-primary btn-lg btn-block">Do you want to play again?</button>
+    
+    </div>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 </html>
 

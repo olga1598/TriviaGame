@@ -6,16 +6,121 @@ body {
     background-image: url("../images/gravel.png");
     margin: auto;
     width: 60%;
-    margin-top: 100px;
+    box-shadow: 10px, 10px, gray;
+    height: 650px;
+    margin-top: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/*Game name*/
 .display-4 {
     text-align: center;
     color: rgb(13, 13, 119);
     text-shadow: 4px 2px #3b9711;
+    
 }
 
-.lead {
+/*All centered*/
+.lead, .question, .timeCount, #rightAnswers, .correctAnswer, #wrongAnswers, #unanswered {
     text-align: center;
 }
+
+/*Start button*/
+a.btn {
+    padding: 50px 100px 50px 100px;
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 6px 6px gray;
+}
+
+/*Asking question*/
+.question {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    color:rgb(2, 2, 66);
+    text-shadow: 2px 2px gray;
+}
+
+/*Timeout counter*/
+.timeCount {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+
+/*The list of buttons with possible answers*/
+.answers {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+}
+
+/*#answer1:hover {
+    background-color: #778baf;
+}
+#answer2:hover {
+    background-color: #778baf;
+
+}
+#answer3:hover {
+    background-color: #778baf;
+}
+#answer4:hover {
+    background-color: #778baf;
+}*/
+
+/*Message with wrong or right answer*/
+.result {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 40px;
+    color: darkblue;
+}
+
+
+/*.answers .btn-secondary {
+    background-color: #313b74;
+    border: 3px solid rgb(69, 86, 163);
+    margin-left: 10%;
+    width: 70%;
+}*/
+
+/*4 buttons with possible answers*/
+.btn-info {
+    background-color: #056878;
+    width: 80%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#pic, #correctAnswer {
+    display: block;
+    margin:auto;
+}
+
+/*Final page results*/
+#rightAnswers, #wrongAnswers, #unanswered {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: darkblue;
+    font-size: 20px;
+}
+
+/*button if play again*/
+#playagain {
+    color: lightskyblue;
+    font-size: 20px;
+    background-color: rgb(20, 20, 104);
+    box-shadow: 6px 6px gray;
+}
+
+#playagain:hover {
+    background-color: #056878;
+    color:darkgrey;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
