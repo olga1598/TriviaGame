@@ -5,6 +5,7 @@ $(".timeCount").hide();
 $(".answers").hide();
 $("#correctAnswer").hide();
 $("#playagain").hide();
+$("#timeisup").hide();
 
 var showNext;
 var countDown;
@@ -66,15 +67,15 @@ var questionAnswer = [{
     }];
 
 
-$("a.btn").on("click", function(){
-
+//Game begins when user clicks on START button
+    $("a.btn").on("click", function(){
     $(".timeCount").fadeIn();
     $("a.btn").hide(); 
     displayQuestion();
     $(".answers").fadeIn();
-});        
+    });        
 
-    //Setting up the countdown timer for 30 sec
+    //Setting up the countdown timer for 15 sec
     function countDownTime() {    
         if (timeLeft == 0) {
           clearTimeout(countDown);          
@@ -87,11 +88,13 @@ $("a.btn").on("click", function(){
         $(".timeCount").text('Time remaining: ' + timeLeft + ' seconds'); 
     };
 
+    //When the time is up
     function displayTimeIsUp(){
         $(".result").show();
         $(".answers").hide();
         $(".question").hide();
         $(".correctAnswer").show();
+        $("#timeisup").show();
         $(".result").text("Sorry, the time is up:(");
         $(".correctAnswer").text("The right answer is: " + questionAnswer[counter].answer[questionAnswer[counter].correctAnswer]);
         unanswered++;
@@ -103,6 +106,8 @@ $("a.btn").on("click", function(){
         $("#rightAnswers").hide();
         $(".result").hide();
         $("#playagain").hide();
+        $("#timeisup").hide();
+        $(".timeCount").show();
         //clearTimeout(countdown);
     if (counter <= 9) {
         timeLeft = 15;
@@ -124,7 +129,8 @@ $("a.btn").on("click", function(){
         }       
      };
     
-    $(".btn-info").on("click", function(){
+    //When user make his choice and clicks on on of 4 possible answers buttons
+     $(".btn-info").on("click", function(){
         clearTimeout(countDown);
         //Retrieve the text from the button (since it doesn't have the value)
         var choice = $(this).html();
@@ -139,9 +145,9 @@ $("a.btn").on("click", function(){
             console.log("RIGHT: " + rightAnswers);
         }
         counter++;
-        
         });
    
+    //When user picked the correct answer    
     function rightAnswer() {
         clearTimeout(countDown);
         $(".result").show();
@@ -153,6 +159,7 @@ $("a.btn").on("click", function(){
        
     }
 
+    //Usewr picked the wrong answer
     function wrongAnswer() {
         clearTimeout(countDown);        
         $(".correctAnswer").show();
@@ -167,6 +174,7 @@ $("a.btn").on("click", function(){
         
     }
 
+    //Display next question
     function nextQuestion() {
         clearTimeout(showNext); 
         $("#correctAnswer").hide();
@@ -176,6 +184,7 @@ $("a.btn").on("click", function(){
         //alert("hi");
     }
 
+    //Display final page with all the scores
     function finalPage() {
         clearTimeout(showNext);  
         $("#correctAnswer").hide();
@@ -183,9 +192,10 @@ $("a.btn").on("click", function(){
         $(".result").hide();
         $(".answers").hide();
         $(".question").hide();
-        $("#unanswered").append("Unanswered questions: " + unanswered);
-        $("#wrongAnswers").append("Wrong answeres: " + wrongAnswers);
-        $("#rightAnswers").append("Correct answeres: " + rightAnswers);
+        $("#timeisup").hide();
+        $("#unanswered").text("Unanswered questions: " + unanswered);
+        $("#wrongAnswers").text("Wrong answeres: " + wrongAnswers);
+        $("#rightAnswers").text("Correct answeres: " + rightAnswers);
         $("#unanswered").show();
         $("#wrongAnswers").show();
         $("#rightAnswers").show();
@@ -198,6 +208,7 @@ $("a.btn").on("click", function(){
 
     }
     
+    //Asking the user if he wants to play again
     $("#playagain").on("click", function(){
         counter = 0;
         rightAnswers = 0;
@@ -212,32 +223,6 @@ $("a.btn").on("click", function(){
 
       
     
-    /*function displayQuestion(){
-        countDown = setInterval(countDownTime, 1000);
-        //Random chosen question
-        var Question = questionAnswer[0];
-        $(".question").append(Question.question);
-        $(".answers .btn-secondary #option1").append(Question.answer[0]);
-        $(".answers #option2").text(Question.answer[1]);
-        $(".answers #option3").text(Question.answer[2]);
-        $(".answers #option4").text(Question.answer[3]);
-        console.log(Question.answer[0]);
-     };
-     var userClick = $(".btn-secondary").on("click", function(){
-        clearTimeout(countDown);
-        var value = $("input[type='radio']:checked").val();
-        console.log(value);
-        //var x = Object.keys(userClick);
-        //console.log(x);
-        //console.log(userClick);
-        //if (userClick != questionAnswer[0].answer[0]) {
-            //you are wrong;
-            //the right answer is questionAnswer.answer[0]
-        //}else {
-            //correct answer
-        //}
-        });*/
-
 
 
 

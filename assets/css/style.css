@@ -54,20 +54,6 @@ a.btn {
     text-align: center;
 }
 
-/*#answer1:hover {
-    background-color: #778baf;
-}
-#answer2:hover {
-    background-color: #778baf;
-
-}
-#answer3:hover {
-    background-color: #778baf;
-}
-#answer4:hover {
-    background-color: #778baf;
-}*/
-
 /*Message with wrong or right answer*/
 .result {
     text-align: center;
@@ -91,7 +77,7 @@ a.btn {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#pic, #correctAnswer {
+#pic, #correctAnswer, #timeisup {
     display: block;
     margin:auto;
 }
